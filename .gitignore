@@ -3,3 +3,10 @@ __pycache__/
 *$py.class
 Session.vim
 ckpt/
+data/
+.eggs/
+build/
+svox2.egg-info/
+svox2_bak/
+opt/ckpt_arf
+opt/ckpt_svox2

@@ -1,5 +1,5 @@
 # run: conda env create -f environment.yml
-name: plenoxel
+name: arf-svox2
 channels:
   - pytorch
   - defaults

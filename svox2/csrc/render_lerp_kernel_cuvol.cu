@@ -1074,6 +1074,7 @@ void volume_render_cuvol_fused(
         float beta_loss,
         float sparsity_loss,
         torch::Tensor rgb_out,
+        bool is_rgb_gt,
         GridOutputGrads& grads) {
 
     DEVICE_GUARD(grid.sh_data);
@@ -1112,8 +1113,10 @@ void volume_render_cuvol_fused(
                 opt,
                 log_transmit.data_ptr<float>(),
                 rgb_out.packed_accessor32<float, 2, torch::RestrictPtrTraits>());
-    }
+    }   
 
+    //assert (is_rgb_gt);
+    
     {
         const int blocks = CUDA_N_BLOCKS_NEEDED(Q * WARP_SIZE, TRACE_RAY_BKWD_CUDA_THREADS);
         device::render_ray_backward_kernel<<<blocks, TRACE_RAY_BKWD_CUDA_THREADS>>>(
@@ -1121,7 +1124,8 @@ void volume_render_cuvol_fused(
                 rgb_gt.data_ptr<float>(),
                 rgb_out.data_ptr<float>(),
                 rays, opt,
-                true,
+                // true,
+                is_rgb_gt,
                 beta_loss > 0.f ? log_transmit.data_ptr<float>() : nullptr,
                 beta_loss / Q,
                 sparsity_loss,
@@ -1141,7 +1145,8 @@ void volume_render_cuvol_fused(
                 opt,
                 log_transmit.data_ptr<float>(),
                 accum.data_ptr<float>(),
-                true,
+                // true,
+                is_rgb_gt,
                 sparsity_loss,
                 // Output
                 grads);

@@ -20,7 +20,7 @@ Tensor volume_render_cuvol_image(SparseGridSpec &, CameraSpec &,
 void volume_render_cuvol_backward(SparseGridSpec &, RaysSpec &, RenderOptions &,
                                   Tensor, Tensor, GridOutputGrads &);
 void volume_render_cuvol_fused(SparseGridSpec &, RaysSpec &, RenderOptions &,
-                               Tensor, float, float, Tensor, GridOutputGrads &);
+                               Tensor, float, float, Tensor, bool, GridOutputGrads &);
 // Expected termination (depth) rendering
 torch::Tensor volume_render_expected_term(SparseGridSpec &, RaysSpec &,
                                           RenderOptions &);

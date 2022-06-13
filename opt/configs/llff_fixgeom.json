@@ -1,0 +1,16 @@
+{
+    "reso": "[[256, 256, 128], [512, 512, 128], [1408, 1156, 128]]",
+    "upsamp_every": 38400,
+    "lr_sigma": 0,
+    "lr_sigma_final": 0,
+    "lr_sh": 1e-1,
+    "lr_sh_final": 1e-2,
+    "thresh_type": "sigma",
+    "density_thresh": 5,
+    "lambda_tv": 0,
+    "lambda_tv_sh": 5e-3,
+    "lambda_sparsity": 0,
+    "background_brightness": 0.5,
+    "last_sample_opaque": false,
+    "tv_early_only": 0
+}
