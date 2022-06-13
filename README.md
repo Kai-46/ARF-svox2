@@ -29,7 +29,7 @@ Citation:
 ```bash
 cd opt && . ./try_{llff/tnt/custom}.sh [scene_name] [style_id]
 ```
-* Select ```{llff/tnt/custom}``` according to your data type. For example, use ```llff``` for ```Flower``` scene, ```tnt``` for ```Playground``` scene, and ```custom``` for ```lego``` scene. 
+* Select ```{llff/tnt/custom}``` according to your data type. For example, use ```llff``` for ```flower``` scene, ```tnt``` for ```Playground``` scene, and ```custom``` for ```lego``` scene. 
 * ```[style_id].jpg``` is the style image inside ```../data/styles```. For example, ```14.jpg``` is the starry night painting.
 * Note that a photorealistic radiance fields will first be reconstructed for each scene, if it doesn't exist on disk.
 
