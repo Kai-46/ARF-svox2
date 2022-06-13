@@ -40,8 +40,8 @@ The optimized artistic radiance filed is inside ```opt/ckpt_arf/[scene_name]_[st
 Please follow the steps on [Plenoxel](https://github.com/sxyu/svox2)  to prepare your own custom data.
 
 ## ARF with other NeRF variants
-[ARF-TensoRF](): to be released; stay tuned.
-[ARF-NeRF](): to be released; stay tuned.
+* [ARF-TensoRF](): to be released; stay tuned.
+* [ARF-NeRF](): to be released; stay tuned.
 
 ## Acknowledgement:
 We would like to thank [Plenoxel](https://github.com/sxyu/svox2) authors for open-sourcing their implementations.
