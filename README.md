@@ -31,7 +31,7 @@ cd opt && . ./try_{llff/tnt/custom}.sh [scene_name] [style_id]
 ```
 * Select ```{llff/tnt/custom}``` according to your data type. For example, use ```llff``` for ```flower``` scene, ```tnt``` for ```Playground``` scene, and ```custom``` for ```lego``` scene. 
 * ```[style_id].jpg``` is the style image inside ```../data/styles```. For example, ```14.jpg``` is the starry night painting.
-* Note that a photorealistic radiance fields will first be reconstructed for each scene, if it doesn't exist on disk.
+* Note that a photorealistic radiance field will first be reconstructed for each scene, if it doesn't exist on disk. This will take extra time.
 
 ### Check results
 The optimized artistic radiance filed is inside ```opt/ckpt_arf/[scene_name]_[style_id]```, while the photorealistic one is inside ```opt/ckpt_svox2/[scene_name]_[style_id]```.
