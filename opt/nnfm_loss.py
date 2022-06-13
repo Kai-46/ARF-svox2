@@ -67,7 +67,7 @@ def argmin_cos_distance(a, b, center=False):
     return z_best
 
 
-def feat_replace(a, b):
+def nn_feat_replace(a, b):
     n, c, h, w = a.size()
     n2, c, h2, w2 = b.size()
 
@@ -172,7 +172,7 @@ class NNFMLoss(torch.nn.Module):
             s_feats = torch.cat([s_feats_all[ix_map[ix]] for ix in layers], 1)
 
             if "nnfm_loss" in loss_names:
-                target_feats = feat_replace(x_feats, s_feats)
+                target_feats = nn_feat_replace(x_feats, s_feats)
                 loss_dict["nnfm_loss"] += cos_loss(x_feats, target_feats)
 
             if "gram_loss" in loss_names:
