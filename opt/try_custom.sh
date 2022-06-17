@@ -1,4 +1,3 @@
-
 SCENE=$1
 STYLE=$2
 
