@@ -21,7 +21,7 @@ Citation:
 ```bash
 . ./create_env.sh
 ```
-### Donwload data
+### Download data
 ```bash
 . ./download_data.sh
 ```
