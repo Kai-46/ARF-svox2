@@ -11,7 +11,7 @@ Citation:
       title={ARF: Artistic Radiance Fields}, 
       author={Kai Zhang and Nick Kolkin and Sai Bi and Fujun Luan and Zexiang Xu and Eli Shechtman and Noah Snavely},
       year={2022},
-      booktitle={arXiv},
+      booktitle={ECCV},
 }
 ```
 
