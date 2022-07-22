@@ -34,7 +34,7 @@ cd opt && . ./try_{llff/tnt/custom}.sh [scene_name] [style_id]
 * Note that a photorealistic radiance field will first be reconstructed for each scene, if it doesn't exist on disk. This will take extra time.
 
 ### Check results
-The optimized artistic radiance filed is inside ```opt/ckpt_arf/[scene_name]_[style_id]```, while the photorealistic one is inside ```opt/ckpt_svox2/[scene_name]```.
+The optimized artistic radiance field is inside ```opt/ckpt_arf/[scene_name]_[style_id]```, while the photorealistic one is inside ```opt/ckpt_svox2/[scene_name]```.
 
 ### Custom data
 Please follow the steps on [Plenoxel](https://github.com/sxyu/svox2)  to prepare your own custom data.
